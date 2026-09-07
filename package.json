@@ -1,7 +1,13 @@
 {
-  "name": "mortgage-calculator",
-  "private": true,
+  "name": "cbe-diaspora-mortgage-calculator",
   "version": "1.0.0",
+  "description": "Official-grade Commercial Bank of Ethiopia (CBE) Diaspora Mortgage & Loan Financial Advisory Platform with real-time ETB/USD exchange rates, savings planner, and mobile native apps.",
+  "private": true,
+  "homepage": "https://cbe-diaspora-mortgage.pages.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaveMian/mortgage-calculator.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
