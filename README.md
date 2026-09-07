@@ -137,6 +137,8 @@ Pre-built packages are generated in the [`builds/`](./builds) folder and via aut
    npm run dev
    ```
    Open [http://localhost:5173](http://localhost:5173) in your browser.
+   
+   > **Testing on mobile?** Add `--host` to expose the server on your network: `npx vite --host` or `npm run dev -- --host`. Then open `http://<YOUR_IP>:5173` on your phone/tablet.
 
 4. **Compile production web build**:
    ```bash
