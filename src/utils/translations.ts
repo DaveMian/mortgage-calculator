@@ -1,0 +1,148 @@
+export type Language = 'en' | 'am';
+
+export const translations = {
+  en: {
+    // Header & Brand
+    bankTitle: 'Commercial Bank of Ethiopia',
+    diasporaBanking: 'Diaspora Banking',
+    bankSubtitle: 'የኢትዮጵያ ንግድ ባንክ — Mortgage & Multi-Loan Sizing Calculator',
+    bankDailyRate: 'Bank Daily Rate',
+    refreshRate: 'Refresh Rate',
+    resetSettings: 'Reset Settings',
+    printQuotation: 'Download Quotation (PDF)',
+
+    // Tabs
+    tabCalculator: 'CBE Mortgage Calculator',
+    tabComparison: 'Compare Loan Amounts',
+    tabSavings: 'Equity Savings Planner (7%)',
+    tabStrategy: 'Currency Strategy (FCY vs LCY)',
+    tabAmortization: 'Amortization Schedule',
+    tabEligibility: 'Eligibility & Requirements',
+
+    // Quick Metrics
+    monthlyRepayment: 'Monthly Repayment',
+    loanPrincipal: 'CBE Loan Principal',
+    officialRate: 'Official Interest Rate',
+    totalInterest: 'Total Interest to CBE',
+    overYears: 'Over {years} Years',
+    equityBadge: 'Equity: {pct}%',
+
+    // Inputs Card
+    parametersTitle: 'CBE Loan Parameters',
+    parametersSubtitle: 'Commercial Bank of Ethiopia Diaspora Credit Facilities',
+    selectProduct: '1. Select CBE Diaspora Loan Product',
+    residentialMortgage: 'Residential Mortgage',
+    automobileLoan: 'Automobile Loan',
+    mixedUseBuilding: 'Mixed-Use Building',
+    selectArrangement: '2. Financing Arrangement (Repayment Currency)',
+    fcyFcyTitle: 'FCY / FCY',
+    fcyFcyDesc: 'Both equity contribution & monthly repayment in Foreign Currency (USD, EUR, GBP)',
+    fcyFcyBadge: 'Lowest Interest (7% - 9%)',
+    lcyFcyTitle: 'LCY / FCY',
+    lcyFcyDesc: 'Equity contribution in Ethiopian Birr (ETB), monthly repayment in Foreign Currency',
+    lcyFcyBadge: 'Mid Interest (8% - 11%)',
+    fcyLcyTitle: 'FCY / LCY',
+    fcyLcyDesc: 'Equity contribution in Foreign Currency, monthly repayment in Ethiopian Birr (ETB)',
+    fcyLcyBadge: 'Repay in Birr (11% - 13.5%)',
+    propertyValue: 'Residential Property Value',
+    vehicleValue: 'Vehicle Purchase Price',
+    buildingValue: 'Building Estimation Value',
+    equityContribution: 'Equity Contribution (Down Payment)',
+    officialCbeRate: 'Official CBE Interest Rate:',
+    rateCalculatedNote: 'Based on {arrangement} & {equity}% equity',
+    loanTenure: 'Loan Tenure',
+    years: 'Years',
+    editBankRate: 'Edit Bank Rate (1 USD):',
+
+    // Breakdown Card
+    estimatedMonthly: 'Estimated Monthly Repayment',
+    extraPaymentsBtn: 'Extra Payments',
+    activeBadge: 'Active',
+    principalBorrowed: 'Principal Borrowed',
+    totalCbeInterest: 'Total CBE Interest',
+    equityRequired: 'Equity Required',
+    totalRepayment: 'Total Repayment',
+    payoffDate: 'Payoff Date',
+
+    // Quotation
+    quotationTitle: 'Commercial Bank of Ethiopia — Diaspora Mortgage Quotation',
+    quotationSubtitle: 'Official diaspora loan estimate prepared for loan application',
+    preparedOn: 'Prepared On',
+    refNumber: 'Reference No.',
+    applicantCopy: 'Applicant & Bank Review Copy',
+    printOrSave: 'Print / Save as PDF',
+    close: 'Close',
+  },
+  am: {
+    // Header & Brand
+    bankTitle: 'የኢትዮጵያ ንግድ ባንክ',
+    diasporaBanking: 'የዳያስፖራ ባንኪንግ',
+    bankSubtitle: 'የቤት መግዣ እና የብድር ማስያ መተግበሪያ',
+    bankDailyRate: 'የዕለቱ የባንክ ምንዛሬ',
+    refreshRate: 'ምንዛሬ አድስ',
+    resetSettings: 'ወደ ነባሪ መልስ',
+    printQuotation: 'የብድር ማጠቃለያ አውርድ (PDF)',
+
+    // Tabs
+    tabCalculator: 'የሞርጌጅ ማስያ',
+    tabComparison: 'የብድር መጠን ንጽጽር',
+    tabSavings: 'የቅድመ ክፍያ ማከማቻ (7%)',
+    tabStrategy: 'የምንዛሬ ስልት (FCY vs LCY)',
+    tabAmortization: 'የክፍያ ዝርዝር ሰንጠረዥ',
+    tabEligibility: 'መስፈርቶችና ማስረጃዎች',
+
+    // Quick Metrics
+    monthlyRepayment: 'ወርሃዊ ክፍያ',
+    loanPrincipal: 'የተበደሩት ዋና ገንዘብ',
+    officialRate: 'ኦፊሴላዊ የወለድ መጠን',
+    totalInterest: 'ጠቅላላ የሚከፈል ወለድ',
+    overYears: 'በ{years} ዓመታት ውስጥ',
+    equityBadge: 'የቅድመ ክፍያ: {pct}%',
+
+    // Inputs Card
+    parametersTitle: 'የብድር መረጃዎች',
+    parametersSubtitle: 'የኢትዮጵያ ንግድ ባንክ የዳያስፖራ ብድር አማራጮች',
+    selectProduct: '1. የዳያስፖራ ብድር ዓይነት ይምረጡ',
+    residentialMortgage: 'የመኖሪያ ቤት ብድር',
+    automobileLoan: 'የአውቶሞቢል ብድር',
+    mixedUseBuilding: 'የንግድ ሕንፃ ብድር',
+    selectArrangement: '2. የፋይናንስ አከፋፈል ዘዴ (የክፍያ ምንዛሬ)',
+    fcyFcyTitle: 'FCY / FCY',
+    fcyFcyDesc: 'ቅድመ ክፍያም ሆነ ወርሃዊ ክፍያው በውጭ ምንዛሬ (USD, EUR, GBP) የሚፈጸም',
+    fcyFcyBadge: 'ዝቅተኛ ወለድ (7% - 9%)',
+    lcyFcyTitle: 'LCY / FCY',
+    lcyFcyDesc: 'ቅድመ ክፍያ በብር፣ ወርሃዊ ክፍያ በውጭ ምንዛሬ የሚፈጸም',
+    lcyFcyBadge: 'መካከለኛ ወለድ (8% - 11%)',
+    fcyLcyTitle: 'FCY / LCY',
+    fcyLcyDesc: 'ቅድመ ክፍያ በውጭ ምንዛሬ፣ ወርሃዊ ክፍያ በኢትዮጵያ ብር የሚፈጸም',
+    fcyLcyBadge: 'በብር የሚከፈል (11% - 13.5%)',
+    propertyValue: 'የቤቱ አጠቃላይ ዋጋ',
+    vehicleValue: 'የተሽከርካሪው ዋጋ',
+    buildingValue: 'የሕንፃው ግምታዊ ዋጋ',
+    equityContribution: 'የቅድመ ክፍያ ድርሻ (Equity)',
+    officialCbeRate: 'የባንኩ ኦፊሴላዊ ወለድ:',
+    rateCalculatedNote: 'በ{arrangement} እና {equity}% ቅድመ ክፍያ መሠረት',
+    loanTenure: 'የብድር ማጠናቀቂያ ጊዜ',
+    years: 'ዓመታት',
+    editBankRate: 'የዕለቱ ምንዛሬ (1 ዶላር):',
+
+    // Breakdown Card
+    estimatedMonthly: 'ግምታዊ ወርሃዊ ክፍያ',
+    extraPaymentsBtn: 'ተጨማሪ ክፍያ',
+    activeBadge: 'ተግባራዊ ሆኗል',
+    principalBorrowed: 'የተበደሩት ዋና ገንዘብ',
+    totalCbeInterest: 'ጠቅላላ ለባንኩ የሚከፈል ወለድ',
+    equityRequired: 'የሚጠበቅ የቅድመ ክፍያ',
+    totalRepayment: 'አጠቃላይ ተመላሽ ክፍያ',
+    payoffDate: 'የብድር ማጠናቀቂያ ቀን',
+
+    // Quotation
+    quotationTitle: 'የኢትዮጵያ ንግድ ባንክ — የዳያስፖራ ሞርጌጅ ማጠቃለያ',
+    quotationSubtitle: 'ለብድር ማመልከቻ የተዘጋጀ ኦፊሴላዊ የሞርጌጅ ሰነድ',
+    preparedOn: 'የተዘጋጀበት ቀን',
+    refNumber: 'መለያ ቁጥር',
+    applicantCopy: 'የአመልካችና የባንክ ቅጂ',
+    printOrSave: 'አትም / በPDF አስቀምጥ',
+    close: 'ዝጋ',
+  },
+};

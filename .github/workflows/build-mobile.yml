@@ -1,0 +1,92 @@
+name: Build Mobile Apps (Android & iOS)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-android:
+    name: Build Android APK & AAB
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Web Assets & Sync Capacitor
+        run: |
+          npm run build
+          npx cap sync android
+
+      - name: Build Android Debug & Release APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+          ./gradlew assembleRelease
+          ./gradlew bundleRelease
+
+      - name: Upload Android APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: cbe-diaspora-mortgage-android-apk
+          path: android/app/build/outputs/apk/debug/*.apk
+
+      - name: Upload Android AAB (for Google Play Console)
+        uses: actions/upload-artifact@v4
+        with:
+          name: cbe-diaspora-mortgage-android-aab
+          path: android/app/build/outputs/bundle/release/*.aab
+
+  build-ios:
+    name: Build iOS App (Xcode / App Store)
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Web Assets & Sync Capacitor
+        run: |
+          npm run build
+          npx cap sync ios
+
+      - name: Build iOS Xcode Archive
+        run: |
+          cd ios/App
+          xcodebuild -scheme App \
+            -workspace App.xcworkspace \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/App.xcarchive \
+            archive \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Upload iOS Archive (for App Store Connect)
+        uses: actions/upload-artifact@v4
+        with:
+          name: cbe-diaspora-mortgage-ios-archive
+          path: ios/App/build/App.xcarchive

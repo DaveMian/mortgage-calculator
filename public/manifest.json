@@ -1,0 +1,17 @@
+{
+  "short_name": "CBE Diaspora",
+  "name": "Commercial Bank of Ethiopia Diaspora Mortgage Calculator",
+  "description": "Calculate CBE Diaspora mortgage breakdowns, compare loan amounts, and track 7% savings equity goals.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#501344",
+  "theme_color": "#501344",
+  "display": "standalone",
+  "orientation": "portrait-primary"
+}
