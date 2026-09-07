@@ -206,10 +206,12 @@ export const App: React.FC = () => {
 
       {/* Main Tab Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 w-full print:hidden">
-        <div className="flex items-center space-x-2 border-b border-slate-200 overflow-x-auto pb-0.5">
+        <div className="flex items-center space-x-2 border-b border-slate-200 overflow-x-auto pb-0.5" role="tablist">
           <button
             type="button"
             onClick={() => setActiveTab('breakdown')}
+            aria-selected={activeTab === 'breakdown'}
+            role="tab"
             className={`flex items-center gap-2 pb-3 px-3 text-sm font-bold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
               activeTab === 'breakdown'
                 ? 'border-[#6a1a5b] text-[#6a1a5b]'
@@ -223,6 +225,8 @@ export const App: React.FC = () => {
           <button
             type="button"
             onClick={() => setActiveTab('comparison')}
+            aria-selected={activeTab === 'comparison'}
+            role="tab"
             className={`flex items-center gap-2 pb-3 px-3 text-sm font-bold border-b-2 whitespace-nowrap transition-all relative cursor-pointer ${
               activeTab === 'comparison'
                 ? 'border-[#6a1a5b] text-[#6a1a5b]'
@@ -236,6 +240,8 @@ export const App: React.FC = () => {
           <button
             type="button"
             onClick={() => setActiveTab('savings')}
+            aria-selected={activeTab === 'savings'}
+            role="tab"
             className={`flex items-center gap-2 pb-3 px-3 text-sm font-bold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
               activeTab === 'savings'
                 ? 'border-[#6a1a5b] text-[#6a1a5b]'
@@ -249,6 +255,8 @@ export const App: React.FC = () => {
           <button
             type="button"
             onClick={() => setActiveTab('strategy')}
+            aria-selected={activeTab === 'strategy'}
+            role="tab"
             className={`flex items-center gap-2 pb-3 px-3 text-sm font-bold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
               activeTab === 'strategy'
                 ? 'border-[#6a1a5b] text-[#6a1a5b]'
@@ -262,6 +270,8 @@ export const App: React.FC = () => {
           <button
             type="button"
             onClick={() => setActiveTab('amortization')}
+            aria-selected={activeTab === 'amortization'}
+            role="tab"
             className={`flex items-center gap-2 pb-3 px-3 text-sm font-bold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
               activeTab === 'amortization'
                 ? 'border-[#6a1a5b] text-[#6a1a5b]'
@@ -275,6 +285,8 @@ export const App: React.FC = () => {
           <button
             type="button"
             onClick={() => setActiveTab('eligibility')}
+            aria-selected={activeTab === 'eligibility'}
+            role="tab"
             className={`flex items-center gap-2 pb-3 px-3 text-sm font-bold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
               activeTab === 'eligibility'
                 ? 'border-[#6a1a5b] text-[#6a1a5b]'
